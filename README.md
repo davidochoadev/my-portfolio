@@ -1,8 +1,10 @@
-# Remix Indie Stack
+# My Personal Portfolio App
+## With Remix Indie Stack
 
 ![The Remix Indie Stack](https://repository-images.githubusercontent.com/465928257/a241fa49-bd4d-485a-a2a5-5cb8e4ee0abf)
 
 Learn more about [Remix Stacks](https://remix.run/stacks).
+If you want create your personal app, you can use:
 
 ```
 npx create-remix@latest --template remix-run/indie-stack
@@ -78,7 +80,7 @@ Prior to your first deployment, you'll need to do a few things:
 - Sign up and log in to Fly
 
   ```sh
-  fly auth signup
+  flyctl auth signup
   ```
 
   > **Note:** If you have more than one Fly account, ensure that you are signed into the same account in the Fly CLI as you are in the browser. In your terminal, run `fly auth whoami` and ensure the email matches the Fly account signed into the browser.
@@ -86,8 +88,8 @@ Prior to your first deployment, you'll need to do a few things:
 - Create two apps on Fly, one for staging and one for production:
 
   ```sh
-  fly apps create davidochoa-e6ad
-  fly apps create davidochoa-e6ad-staging
+  flyctl apps create davidochoa-e6ad
+  flyctl apps create davidochoa-e6ad-staging
   ```
 
   > **Note:** Make sure this name matches the `app` set in your `fly.toml` file. Otherwise, you will not be able to deploy.
@@ -109,8 +111,8 @@ Prior to your first deployment, you'll need to do a few things:
 - Add a `SESSION_SECRET` to your fly app secrets, to do this you can run the following commands:
 
   ```sh
-  fly secrets set SESSION_SECRET=$(openssl rand -hex 32) --app davidochoa-e6ad
-  fly secrets set SESSION_SECRET=$(openssl rand -hex 32) --app davidochoa-e6ad-staging
+  flyctl secrets set SESSION_SECRET=$(openssl rand -hex 32) --app davidochoa-e6ad
+  flyctl secrets set SESSION_SECRET=$(openssl rand -hex 32) --app davidochoa-e6ad-staging
   ```
 
   If you don't have openssl installed, you can also use [1password](https://1password.com/password-generator/) to generate a random secret, just replace `$(openssl rand -hex 32)` with the generated secret.
@@ -118,15 +120,18 @@ Prior to your first deployment, you'll need to do a few things:
 - Create a persistent volume for the sqlite database for both your staging and production environments. Run the following:
 
   ```sh
-  fly volumes create data --size 1 --app davidochoa-e6ad
-  fly volumes create data --size 1 --app davidochoa-e6ad-staging
+  flyctl volumes create data --size 1 --app davidochoa-e6ad
+  flyctl volumes create data --size 1 --app davidochoa-e6ad-staging
   ```
 
 Now that everything is set up you can commit and push your changes to your repo. Every commit to your `main` branch will trigger a deployment to your production environment, and every commit to your `dev` branch will trigger a deployment to your staging environment.
 
 ### Connecting to your database
 
-The sqlite database lives at `/data/sqlite.db` in your deployed application. You can connect to the live database by running `fly ssh console -C database-cli`.
+The sqlite database lives at `/data/sqlite.db` in your deployed application. You can connect to the live database by running 
+```sh
+flyctl ssh console -C database-cli
+```
 
 ### Getting Help with Deployment
 
