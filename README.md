@@ -1,9 +1,10 @@
 # J.David Ochoa Portfolio App - With Remix Indie Stack
-> 🇮🇹 - Ciao! Mi chiamo David e questa è la mia app creata con la Remix Indie Stack.</br>
+
 Hi! My name is David and this is my app created with Remix Indie Stack.
+> 🇮🇹 - Ciao! Mi chiamo David e questa è la mia app creata con la Remix Indie Stack.
 ![The Remix Indie Stack](https://repository-images.githubusercontent.com/465928257/a241fa49-bd4d-485a-a2a5-5cb8e4ee0abf)
-> 🇮🇹 - Scopri di più sulle varie [Stacks di Remix](https://remix.run/stacks). Se vuoi creare la tua personale app, puoi utilizzare:</br>
 Learn more about [Remix Stacks](https://remix.run/stacks). If you want to create your personal app, you can use:
+> 🇮🇹 - Scopri di più sulle varie [Stacks di Remix](https://remix.run/stacks). Se vuoi creare la tua personale app, puoi utilizzare:
 
 ```
 npx create-remix@latest --template remix-run/indie-stack
