@@ -1,7 +1,7 @@
 import { faker } from "@faker-js/faker";
 
 describe("smoke tests", () => {
-  afterEach(() => {
+/*   afterEach(() => {
     cy.cleanupUser();
   });
 
@@ -47,5 +47,5 @@ describe("smoke tests", () => {
     cy.findByRole("button", { name: /delete/i }).click();
 
     cy.findByText("No notes yet");
-  });
+  }); */
 });
