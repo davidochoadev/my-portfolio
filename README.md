@@ -1,15 +1,15 @@
 # J.David Ochoa Portfolio App - With Remix Indie Stack
-🇮🇹 Ciao! Mi chiamo David e questa è la mia app creata con la Remix Indie Stack.</br>
+> 🇮🇹 - Ciao! Mi chiamo David e questa è la mia app creata con la Remix Indie Stack.</br>
 Hi! My name is David and this is my app created with Remix Indie Stack.
 ![The Remix Indie Stack](https://repository-images.githubusercontent.com/465928257/a241fa49-bd4d-485a-a2a5-5cb8e4ee0abf)
-🇮🇹 Scopri di più sulle varie [Stacks di Remix](https://remix.run/stacks). Se vuoi creare la tua personale app, puoi utilizzare:</br>
+> 🇮🇹 - Scopri di più sulle varie [Stacks di Remix](https://remix.run/stacks). Se vuoi creare la tua personale app, puoi utilizzare:</br>
 Learn more about [Remix Stacks](https://remix.run/stacks). If you want to create your personal app, you can use:
 
 ```
 npx create-remix@latest --template remix-run/indie-stack
 ```
 
-## What's in the stack
+## What's in the stack | Cosa puoi trovare all'interno della Indie Stack?
 
 - [Fly app deployment](https://fly.io) with [Docker](https://www.docker.com/)
 - Production-ready [SQLite Database](https://sqlite.org)
@@ -26,14 +26,17 @@ npx create-remix@latest --template remix-run/indie-stack
 - Static Types with [TypeScript](https://typescriptlang.org)
 
 Not a fan of bits of the stack? Fork it, change it, and use `npx create-remix --template your/repo`! Make it your own.
+> 🇮🇹 - Non trovi nessuno stack di tuo gradimento? Effettua un fork, cambialo ed utilizza `npx create-remix --template your/repo`! Creane uno tuo.
 
-## Quickstart
+## Quickstart | Come cominciare
 
 Click this button to create a [Gitpod](https://gitpod.io) workspace with the project set up and Fly pre-installed
+> 🇮🇹 - Clicca questo bottone per creare un [Gitpod](https://gitpod.io), uno spazio di lavoro predefinito con il progetto già configurato e pre-installato.
+
 
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/from-referrer/)
 
-## Development
+## Development | Sviluppo
 
 - This step only applies if you've opted out of having the CLI install dependencies for you:
 
