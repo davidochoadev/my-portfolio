@@ -1,59 +1,73 @@
 import { Button, IconButton, MobileNav, Navbar, Typography } from "@material-tailwind/react";
+import { NavLink } from "@remix-run/react";
 import { useEffect, useState } from "react";
 
-export default function MyNavBar() {
+export default function MyNavBar(data: any) {
   const [openNav, setOpenNav] = useState(false);
+  const homeIsView = data.homeIsView
+  const aboutIsView = data.isView;
+  const worksIsView = data.worksIsView;
+  const contactsIsView = data.contactsIsView;
+
   useEffect(() => {
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpenNav(false)
     );
+
   }, []);
+
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
+      <NavLink
+      to="#about"
       >
-        <a href="#" className="flex items-center">
+        <Typography
+          as="li"
+          variant="small"
+          color="blue-gray"
+          className={aboutIsView ? "p-1 font-normal text-green-500" : "p-1 font-normal"}
+        >
           About
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
+        </Typography>
+      </NavLink>
+      <NavLink
+      to="#works"
       >
-        <a href="#" className="flex items-center">
-          Work
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
+        <Typography
+          as="li"
+          variant="small"
+          color="blue-gray"
+          className={worksIsView ? "p-1 font-normal text-green-500" : "p-1 font-normal"}
+        >
+          Works
+        </Typography>
+      </NavLink>
+      <NavLink
+      to="#contacts"
       >
-        <a href="#" className="flex items-center">
-          Contact
-        </a>
-      </Typography>
+        <Typography
+          as="li"
+          variant="small"
+          color="blue-gray"
+          className={contactsIsView ? "p-1 font-normal text-green-500" : "p-1 font-normal"}
+        >
+            Contacts
+        </Typography>
+      </NavLink>
     </ul>
   );
  
   return (
-    <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4">
+    <Navbar className="fixed top-0 left-0 right-0 z-10 mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4">
       <div className="container mx-auto flex items-center text-blue-gray-900">
         <Typography
           as="a"
-          href="https://github.com/davideochoaa"
+          href="#home"
           variant="small"
           className="mr-4 cursor-pointer py-1.5 font-normal grow "
         >
-          <span>David Ochoa</span>
+          <span className={homeIsView ? "text-green-500" : "text-gray-900"}>David Ochoa</span>
         </Typography>
         <div className="hidden lg:block">
           {navList}
