@@ -3,6 +3,10 @@ import { Typography } from "@material-tailwind/react";
 import { Link } from "@remix-run/react";
 import { useEffect, useState } from "react";
 import { InView, useInView } from "react-intersection-observer";
+import AboutSection from "~/components/aboutsection";
+import ContactsSection from "~/components/contactssection";
+import HomeSection from "~/components/homesection";
+import WorksSection from "~/components/workssection";
 
 import { useOptionalUser } from "~/utils";
 import MyNavBar from "./navbar";
@@ -25,18 +29,10 @@ export default function Index() {
   return (
     <main className="scroll-smooth">
       <MyNavBar isView={inView} worksIsView={worksInView} contactsIsView={contactsInView} homeIsView={homeInView}/>
-      <section className="bg-blue-gray-900 h-screen relative">
-        <InView as="div" id="home" className="absolute top-0 h-2 w-full" onChange={homeSetInView} />
-      </section>
-      <section className="bg-blue-gray-900 h-screen relative">
-        <InView as="div" id="about" className="absolute top-0.5 h-2 w-full" onChange={setInView} />
-      </section>
-      <section className="bg-blue-gray-900 h-screen relative">
-        <InView as="div" id="works" className="absolute top-0.5 h-2 w-full" onChange={worksSetInView} />
-      </section>
-      <section className="bg-blue-gray-900 h-screen relative">
-        <InView as="div" id="contacts" className="absolute top-0.5 h-2 w-full" onChange={contactsSetInView} />
-      </section>
+      <HomeSection homeSetInView={homeSetInView} />
+      <AboutSection setInView={setInView} />
+      <WorksSection worksSetInView={worksSetInView} />
+      <ContactsSection contactsSetInView={contactsSetInView} />
     </main>
   );
 }
