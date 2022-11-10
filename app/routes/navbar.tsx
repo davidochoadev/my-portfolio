@@ -59,7 +59,7 @@ export default function MyNavBar(data: any) {
   );
  
   return (
-    <Navbar className="fixed top-0 left-0 right-0 z-10 mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4 bg-blue-gray-900 border-0">
+    <Navbar className="fixed top-0 left-0 right-0 z-10 mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4 bg-blue-gray-900 border-0" shadow={false} blurred={false} >
       <div className="container mx-auto flex items-center">
         <Typography
           as="a"
