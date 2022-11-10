@@ -25,16 +25,16 @@ export default function Index() {
   return (
     <main className="scroll-smooth">
       <MyNavBar isView={inView} worksIsView={worksInView} contactsIsView={contactsInView} homeIsView={homeInView}/>
-      <section className="bg-gray-500 h-screen relative">
+      <section className="bg-blue-gray-900 h-screen relative">
         <InView as="div" id="home" className="absolute top-0 h-2 w-full" onChange={homeSetInView} />
       </section>
-      <section className="bg-gray-600 h-screen relative">
+      <section className="bg-blue-gray-900 h-screen relative">
         <InView as="div" id="about" className="absolute top-0.5 h-2 w-full" onChange={setInView} />
       </section>
-      <section className="bg-gray-700 h-screen relative">
+      <section className="bg-blue-gray-900 h-screen relative">
         <InView as="div" id="works" className="absolute top-0.5 h-2 w-full" onChange={worksSetInView} />
       </section>
-      <section className="bg-gray-800 h-screen relative">
+      <section className="bg-blue-gray-900 h-screen relative">
         <InView as="div" id="contacts" className="absolute top-0.5 h-2 w-full" onChange={contactsSetInView} />
       </section>
     </main>
