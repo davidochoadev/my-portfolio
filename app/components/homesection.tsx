@@ -5,7 +5,7 @@ import Typewriter from "typewriter-effect";
 export default function HomeSection(data: any) {
   const homeSetInView = data.homeSetInView;
   return (
-    <section className="relative h-screen flex">
+    <section className="relative h-screen flex snap-start">
       <InView
         as="div"
         id="home"

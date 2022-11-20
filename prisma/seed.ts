@@ -21,6 +21,9 @@ async function seed() {
           hash: hashedPassword,
         },
       },
+      coding: {
+        create:{},
+      },
     },
   });
 

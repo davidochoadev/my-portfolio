@@ -1,33 +1,28 @@
-
-import { Typography } from "@material-tailwind/react";
-import { Link } from "@remix-run/react";
 import { useEffect, useState } from "react";
-import { InView, useInView } from "react-intersection-observer";
 import AboutSection from "~/components/aboutsection";
 import ContactsSection from "~/components/contactssection";
 import HomeSection from "~/components/homesection";
 import WorksSection from "~/components/workssection";
-
-import { useOptionalUser } from "~/utils";
 import MyNavBar from "./navbar";
+import { getRepos } from "~/models/repos.server";
+import { useLoaderData } from "@remix-run/react";
 
 export default function Index() {
-  const user = useOptionalUser();
+/*   const user = useOptionalUser(); */
   const [inView, setInView] = useState(false);
   const [worksInView, worksSetInView] = useState(false);
   const [contactsInView, contactsSetInView] = useState(false);
   const [homeInView, homeSetInView] = useState(false);
-  const [ ref1, inView1, entry1 ] = useInView({
-    /* Optional options */
-    threshold: 0.5,
-  });
-  
+  const repoNames = useLoaderData();
+  const arrayRepos : any[] = [];
+  const objs = [{typescript: 1,html: 3},{javascript: 2}]
 
-  const isView = () => {
-    console.log(inView1);
+  for(var i=0; i<objs.length; i++){
+    console.log("ao",i,[Object.keys(objs[i])]);
   }
+  
   return (
-    <main className="scroll-smooth">
+    <main className="snap-y snap-mandatory h-screen overflow-scroll">
       <MyNavBar isView={inView} worksIsView={worksInView} contactsIsView={contactsInView} homeIsView={homeInView}/>
       <HomeSection homeSetInView={homeSetInView} />
       <AboutSection setInView={setInView} />
