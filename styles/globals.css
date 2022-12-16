@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+   font-family: "goodbrush";
+   src: url("/public/fonts/goodbrush.woff2") format('woff2');
+ }
+ 
+ @font-face {
+   font-family: "firacode";
+   src: url('/public/fonts/FiraCode-Retina.woff2') format('woff2');
+ }

@@ -10,13 +10,13 @@ import {
 } from "@remix-run/react";
 
 import tailwindStylesheetUrl from "./styles/tailwind.css";
-import global from "./styles/globals.css";
+import globals from "./styles/globals.css";
 import { getUser } from "./session.server";
 import { ThemeProvider, useTheme } from './utils/theme-provider';
 import { clsx } from "clsx";
 
 export const links: LinksFunction = () => {
-  return [{ rel: "stylesheet", href: tailwindStylesheetUrl },{rel: "stylesheet" , href: global}];
+  return [{ rel: "stylesheet", href: tailwindStylesheetUrl },{rel: "stylesheet" , href: globals}];
 };
 
 export const meta: MetaFunction = () => ({

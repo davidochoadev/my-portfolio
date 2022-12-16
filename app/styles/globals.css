@@ -4,10 +4,10 @@
 
 @font-face {
   font-family: "goodbrush";
-  src: url("/public/font/goodBrush.ttf");
+  src: url("/fonts/goodbrush.woff2") format('woff2');
 }
 
 @font-face {
   font-family: "firacode";
-  src: url("/public/font/FiraCode-Regular.ttf");
+  src: url("/fonts/FiraCode-Retina.woff2") format('woff2');
 }
