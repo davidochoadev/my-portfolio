@@ -37,11 +37,11 @@ model Coding {
   id String @id @default(cuid())
   user   User @relation(fields: [userId], references: [id])
   userId String  @unique
-  typescript Int @default(0)
-  javascript Int @default(0)
-  html Int @default(0)
-  css Int @default(0)
-  others Int @default(0)
+  typescript Decimal @default(0.0)
+  javascript Decimal @default(0.0)
+  html Decimal @default(0.0)
+  css Decimal @default(0.0)
+  others Decimal @default(0.0)
 }
 
 model Note {

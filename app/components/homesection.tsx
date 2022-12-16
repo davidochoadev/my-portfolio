@@ -29,7 +29,7 @@ export default function HomeSection(data: any) {
           </Typography>
           {titleBox ? 
           (
-          <Typography variant="h1" className="w-full text-3xl md:text-4xl lg:text-4xl font-mono text-blue-700">
+          <Typography variant="h1" className="w-full text-3xl md:text-4xl lg:text-4xl font-goodbrush dark:text-[#33DDB3] text-[#33DDB3]">
             <Typewriter
             options={{
               cursor: " ",
@@ -42,7 +42,7 @@ export default function HomeSection(data: any) {
             />
           </Typography>
           ) : (
-            <Typography variant="h2" className="w-full text-3xl md:text-4xl lg:text-3xl font-mono text-blue-700">
+            <Typography variant="h2" className="w-full text-3xl md:text-4xl lg:text-3xl font-goodbrush dark:text-[#33DDB3] text-[#33DDB3]">
             <Typewriter
               options={{
                 cursor: " ",
@@ -55,7 +55,7 @@ export default function HomeSection(data: any) {
             </Typography>
           )
           }
-          <Typography variant="paragraph" className="w-full font-mono text-white">
+          <Typography variant="paragraph" className="w-full font-firacode dark:text-white text-[#111827]">
             {lang ?
               ("I'm a freelance Junior Full-Stack JavaScript/TypeScript & React Developer from Rome in Italy 🇮🇹 with an interest in crypto's and personal finance, in love with my son Noah, my soulmate Mina and felines.") :
               ("Sono uno Sviluppatore Junior Full-Stack specializzato in JavaScript/Typescript e Sviluppo in ReactJS ed attualmente sono situato a Roma in Italia 🇮🇹. Le mie passioni sono le cripto valute e la gestione finanziaria personale, sono innamorato di mio figlio Noah e della mia anima gemella Mina e adoro i gatti.")
@@ -63,7 +63,7 @@ export default function HomeSection(data: any) {
           </Typography>
         </div>
         <div className="relative w-full h-full md:w-1/2 lg:w-1/3 lg:w-1/3 md:mx-4 lg:mx-0 flex justify-center">
-          <div className="w-full h-full md:h-1/2 bg-blue-700 rounded-3xl absolute top-0 bottom-0 md:top-1/4 left-0 md:bottom-0 -z-10 "></div>
+          <div className="w-full h-full md:h-1/2 bg-[#33DDB3] rounded-3xl absolute top-0 bottom-0 md:top-1/4 left-0 md:bottom-0 -z-10 "></div>
           <img src="../assets/img/profile.jpg" alt="J.David Ochoa" className="p-4 md:p-0 w-full rounded-full self-center lg:w-4/5" />
         </div>
       </div>

@@ -10,10 +10,13 @@ import {
 } from "@remix-run/react";
 
 import tailwindStylesheetUrl from "./styles/tailwind.css";
+import global from "./styles/globals.css";
 import { getUser } from "./session.server";
+import { ThemeProvider, useTheme } from './utils/theme-provider';
+import { clsx } from "clsx";
 
 export const links: LinksFunction = () => {
-  return [{ rel: "stylesheet", href: tailwindStylesheetUrl }];
+  return [{ rel: "stylesheet", href: tailwindStylesheetUrl },{rel: "stylesheet" , href: global}];
 };
 
 export const meta: MetaFunction = () => ({
@@ -28,19 +31,28 @@ export async function loader({ request }: LoaderArgs) {
   });
 }
 
-export default function App() {
+function App() {
+  const [theme] = useTheme();
   return (
-    <html lang="en" className="h-full">
-      <head>
-        <Meta />
-        <Links />
-      </head>
-      <body className="h-full bg-[#111827]">
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
-        <LiveReload />
-      </body>
-    </html>
+      <html lang="en" className={clsx(theme)}>
+        <head>
+          <Meta />
+          <Links />
+        </head>
+        <body className="h-full dark:bg-[#111827] bg-[#E8F2FF]">
+          <Outlet />
+          <ScrollRestoration />
+          <Scripts />
+          <LiveReload />
+        </body>
+      </html>
+  );
+}
+
+export default function AppWithProviders() {
+  return (
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   );
 }

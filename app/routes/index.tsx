@@ -4,6 +4,7 @@ import ContactsSection from "~/components/contactssection";
 import HomeSection from "~/components/homesection";
 import WorksSection from "~/components/workssection";
 import MyNavBar from "./navbar";
+import { Theme, useTheme } from "../utils/theme-provider";
 
 export default function Index() {
 /*   const user = useOptionalUser(); */
@@ -13,6 +14,11 @@ export default function Index() {
   const [worksInView, worksSetInView] = useState(false);
   const [contactsInView, contactsSetInView] = useState(false);
   const [homeInView, homeSetInView] = useState(false);
+  const [, setTheme] = useTheme();
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT));
+  };
 /*   const objs = [{typescript: 1,html: 3},{javascript: 2}]
 
   for(var i=0; i<objs.length; i++){
@@ -21,7 +27,7 @@ export default function Index() {
   
   return (
     <main className="snap-y snap-mandatory h-screen overflow-scroll">
-      <MyNavBar titleBox={titleBox} setTitleBox={setTitleBox} lang={lang} setLang={setLang} isView={inView} worksIsView={worksInView} contactsIsView={contactsInView} homeIsView={homeInView}/>
+      <MyNavBar toggleTheme={toggleTheme} titleBox={titleBox} setTitleBox={setTitleBox} lang={lang} setLang={setLang} isView={inView} worksIsView={worksInView} contactsIsView={contactsInView} homeIsView={homeInView}/>
       <HomeSection titleBox={titleBox} lang={lang} homeSetInView={homeSetInView} />
       <AboutSection setInView={setInView} />
       <WorksSection worksSetInView={worksSetInView} />
