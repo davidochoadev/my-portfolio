@@ -4,6 +4,9 @@ import Typewriter from "typewriter-effect";
 
 export default function HomeSection(data: any) {
   const homeSetInView = data.homeSetInView;
+  const lang = data.lang;
+  const titleBox = data.titleBox;
+
   return (
     <section className="relative h-screen flex snap-start">
       <InView
@@ -24,20 +27,39 @@ export default function HomeSection(data: any) {
               }}
             />
           </Typography>
+          {titleBox ? 
+          (
           <Typography variant="h1" className="w-full text-3xl md:text-4xl lg:text-4xl font-mono text-blue-700">
             <Typewriter
             options={{
               cursor: " ",
             }}
-              onInit={(typewriter) => {
-                typewriter
-                  .typeString("Hi, I am David Ochoa 👋")
+              onInit={(typewriter1) => {
+                typewriter1
+                  .typeString("Hi, I am David Ochoa👋")
                   .start();
               }}
             />
           </Typography>
+          ) : (
+            <Typography variant="h2" className="w-full text-3xl md:text-4xl lg:text-3xl font-mono text-blue-700">
+            <Typewriter
+              options={{
+                cursor: " ",
+              }}
+              onInit={(typewriter2) => {
+                typewriter2.typeString("Ciao! Sono David Ochoa👋")
+                .start();
+              }}
+            />
+            </Typography>
+          )
+          }
           <Typography variant="paragraph" className="w-full font-mono text-white">
-          I'm a freelance Junior Full-Stack JavaScript/TypeScript & React Developer from Rome in Italy 🇮🇹 with an interest in crypto's and personal finance, in love with my son Noah, my soulmate Mina and felines.
+            {lang ?
+              ("I'm a freelance Junior Full-Stack JavaScript/TypeScript & React Developer from Rome in Italy 🇮🇹 with an interest in crypto's and personal finance, in love with my son Noah, my soulmate Mina and felines.") :
+              ("Sono uno Sviluppatore Junior Full-Stack specializzato in JavaScript/Typescript e Sviluppo in ReactJS ed attualmente sono situato a Roma in Italia 🇮🇹. Le mie passioni sono le cripto valute e la gestione finanziaria personale, sono innamorato di mio figlio Noah e della mia anima gemella Mina e adoro i gatti.")
+            }
           </Typography>
         </div>
         <div className="relative w-full h-full md:w-1/2 lg:w-1/3 lg:w-1/3 md:mx-4 lg:mx-0 flex justify-center">
