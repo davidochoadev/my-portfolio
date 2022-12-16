@@ -14,10 +14,10 @@ export default function Index() {
   const [worksInView, worksSetInView] = useState(false);
   const [contactsInView, contactsSetInView] = useState(false);
   const [homeInView, homeSetInView] = useState(false);
-  const [, setTheme] = useTheme();
+  const [theme, setTheme] = useTheme();
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT));
+    setTheme(theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT);
   };
 /*   const objs = [{typescript: 1,html: 3},{javascript: 2}]
 
@@ -27,7 +27,7 @@ export default function Index() {
   
   return (
     <main className="snap-y snap-mandatory h-screen overflow-scroll">
-      <MyNavBar toggleTheme={toggleTheme} titleBox={titleBox} setTitleBox={setTitleBox} lang={lang} setLang={setLang} isView={inView} worksIsView={worksInView} contactsIsView={contactsInView} homeIsView={homeInView}/>
+      <MyNavBar theme={theme} toggleTheme={toggleTheme} titleBox={titleBox} setTitleBox={setTitleBox} lang={lang} setLang={setLang} isView={inView} worksIsView={worksInView} contactsIsView={contactsInView} homeIsView={homeInView}/>
       <HomeSection titleBox={titleBox} lang={lang} homeSetInView={homeSetInView} />
       <AboutSection setInView={setInView} />
       <WorksSection worksSetInView={worksSetInView} />

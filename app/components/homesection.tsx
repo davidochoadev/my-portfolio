@@ -2,6 +2,7 @@ import { Typography } from "@material-tailwind/react";
 import { InView } from "react-intersection-observer";
 import Typewriter from "typewriter-effect";
 
+
 export default function HomeSection(data: any) {
   const homeSetInView = data.homeSetInView;
   const lang = data.lang;
@@ -17,7 +18,7 @@ export default function HomeSection(data: any) {
       />
       <div className="mx-4 my-auto md:mx-auto w-full h-full h-4/5 flex flex-col md:flex-row md:justify-center">
         <div id="typography-container" className="w-full lg:w-1/3 md:flex md:items-center md:flex-col md:my-auto md:px-4 pb-4">
-          <Typography variant="h6" className="w-full font-mono text-blue-gray-600">
+          <Typography variant="h6" className="w-full font-firacodeBold text-blue-gray-600">
             <Typewriter
               options={{
                 strings: ["FREELANCER","JUNIOR FULL-STACK WEB DEVELOPER","WEB DESIGNER","CRYPTO ENTHUSIAST","FATHER","CAT LOVER"],
@@ -58,7 +59,7 @@ export default function HomeSection(data: any) {
           <Typography variant="paragraph" className="w-full font-firacode dark:text-white text-[#111827]">
             {lang ?
               ("I'm a freelance Junior Full-Stack JavaScript/TypeScript & React Developer from Rome in Italy 🇮🇹 with an interest in crypto's and personal finance, in love with my son Noah, my soulmate Mina and felines.") :
-              ("Sono uno Sviluppatore Junior Full-Stack specializzato in JavaScript/Typescript e Sviluppo in ReactJS ed attualmente sono situato a Roma in Italia 🇮🇹. Le mie passioni sono le cripto valute e la gestione finanziaria personale, sono innamorato di mio figlio Noah e della mia anima gemella Mina e adoro i gatti.")
+              ("Sono uno Sviluppatore Junior Full-Stack specializzato in JavaScript/Typescript e Sviluppo in ReactJS ed attualmente sono situato a Roma 🇮🇹. Le mie passioni sono le cripto valute, il disegno e la finanza personale. Sono anche un Papà a tempo pieno e sono innamorato di mio figlio Noah e della mia anima gemella Mina e vado matto per i gatti 😼")
             }
           </Typography>
         </div>

@@ -8,6 +8,9 @@ module.exports = withMT({
     fontFamily: {
       goodbrush: ["GoodBrush", "sans-serif"],
       firacode: ["firacode" , "sans-serif"],
+      firacodeMedium: ["firacodeMedium" , "sans-serif"],
+      firacodeSemiBold: ["firacodeSemiBold", "sans-serif"],
+      firacodeBold: ["firacodeBold", "sans-serif"],
     },
     extend: {},
   },

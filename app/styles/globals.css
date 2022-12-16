@@ -11,3 +11,18 @@
   font-family: "firacode";
   src: url("/fonts/FiraCode-Retina.woff2") format('woff2');
 }
+
+@font-face {
+  font-family: "firacodeMedium";
+  src: url('/fonts/FiraCode-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: "firacodeSemiBold";
+  src: url('/fonts/FiraCode-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: "firacodeBold";
+  src: url('/fonts/FiraCode-Bold.woff2') format('woff2');
+}
