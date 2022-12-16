@@ -13,11 +13,11 @@ export default function HomeSection(data: any) {
       <InView
         as="div"
         id="home"
-        className="absolute top-0 h-2 w-full"
+        className="absolute top-0 h-4 w-full"
         onChange={homeSetInView}
       />
-      <div className="mx-4 my-auto md:mx-auto w-full h-full h-4/5 flex flex-col md:flex-row md:justify-center">
-        <div id="typography-container" className="w-full lg:w-1/3 md:flex md:items-center md:flex-col md:my-auto md:px-4 pb-4">
+      <div className="mx-4 md:mx-auto w-full h-full max-h-min flex flex-col md:flex-row md:justify-center">
+        <div id="typography-container" className="w-full lg:w-1/3 pt-16 md:pt-0 lg:w-1/3 md:flex md:items-center md:flex-col md:my-auto md:px-4 pb-4">
           <Typography variant="h6" className="w-full font-firacodeBold text-blue-gray-600">
             <Typewriter
               options={{
@@ -59,13 +59,14 @@ export default function HomeSection(data: any) {
           <Typography variant="paragraph" className="w-full font-firacode dark:text-white text-[#111827]">
             {lang ?
               ("I'm a freelance Junior Full-Stack JavaScript/TypeScript & React Developer from Rome in Italy 🇮🇹 with an interest in crypto's and personal finance, in love with my son Noah, my soulmate Mina and felines.") :
-              ("Sono uno Sviluppatore Junior Full-Stack specializzato in JavaScript/Typescript e Sviluppo in ReactJS ed attualmente sono situato a Roma 🇮🇹. Le mie passioni sono le cripto valute, il disegno e la finanza personale. Sono anche un Papà a tempo pieno e sono innamorato di mio figlio Noah e della mia anima gemella Mina e vado matto per i gatti 😼")
+              ("Sono uno Sviluppatore Junior Full-Stack specializzato in JavaScript/Typescript e Sviluppo in ReactJS ed attualmente sono situato a Roma 🇮🇹. Le mie passioni sono le cripto valute, il disegno e la finanza personale. Sono anche un Papà a tempo pieno e sono innamorato di mio figlio Noah e della mia anima gemella Mina, vado matto per gli animali specialmente per i gatti 😼")
             }
           </Typography>
         </div>
-        <div className="relative w-full h-full md:w-1/2 lg:w-1/3 lg:w-1/3 md:mx-4 lg:mx-0 flex justify-center">
-          <div className="w-full h-full md:h-1/2 bg-[#33DDB3] rounded-3xl absolute top-0 bottom-0 md:top-1/4 left-0 md:bottom-0 -z-10 "></div>
-          <img src="../assets/img/profile.jpg" alt="J.David Ochoa" className="p-4 md:p-0 w-full rounded-full self-center lg:w-4/5" />
+        <div className="h-full w-full md:flex md:items-center md:px-4 lg:w-1/3">
+          <div className="bg-[#33DDB3] rounded-3xl w-full h-5/6 max-h-min mx-auto container md:h-1/2 lg:w-full md:flex md:items-center">
+            <img src="../assets/img/profile.jpg" alt="J.David Ochoa" className="object-contain h-full md:h-5/6 lg:h-5/6 mx-auto rounded-full"/>
+          </div>
         </div>
       </div>
     </section>
