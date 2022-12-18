@@ -1,32 +1,10 @@
 import { Button, Dialog, DialogBody, DialogFooter, DialogHeader, Progress, Typography } from "@material-tailwind/react";
-import { Children, Fragment, useState } from "react";
-import { useRef } from "react";
+import { Fragment, useState } from "react";
 import {
   motion,
-  useScroll,
-  useSpring,
-  useTransform,
-  MotionValue
 } from "framer-motion";
 
-function useParallax(value: MotionValue<number>, distance: number) {
-  return useTransform(value, [0, 1], [-distance, distance]);
-}
 
-function Image({ id }: { id: number }) {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 300);
-
-  return (
-    <section>
-      <div ref={ref}>
-        <img src={`/assets/img/certificati/${id}.png`} alt="David Ochoa Certificate" />
-      </div>
-      <motion.h2 style={{ y }}>{`#00${id}`}</motion.h2>
-    </section>
-  );
-}
 
 export function Card(data : any) {
    const [open, setOpen] = useState(false);
@@ -80,6 +58,7 @@ export function MyLangsStats(data : any) {
                {products.map((product : any) => (
                <div key={product.id} className="mx-4 my-2 md:my-1">
                   <Typography variant="h6" className="font-firacodeBold text-blue-gray-600 ">{product.id}</Typography>
+                  {/* @ts-ignore */}
                   <Progress value={product.value} color={product.id === "TypeScript" && "blue" || product.id === "JavaScript" && "yellow" || product.id === "HTML" && "orange" || product.id === "CSS" && "light-blue" || product.id === "Others" && "purple"} 
                   className=""/>
                </div>))}
@@ -101,6 +80,7 @@ export function MyLangsStats(data : any) {
                   {products.map((product : any) => (
                   <div key={product.id} className="mx-4 my-2 md:my-4 lg:my-2">
                      <Typography variant="h6" className="font-firacodeBold text-blue-gray-600">{product.id}</Typography>
+                     {/* @ts-ignore */}
                      <Progress value={product.value} color={product.id === "TypeScript" && "blue" || product.id === "JavaScript" && "yellow" || product.id === "HTML" && "orange" || product.id === "CSS" && "light-blue" || product.id === "Others" && "purple"} 
                      className=""/>
                   </div>))}
@@ -176,8 +156,8 @@ return(
 }
 
 export function MyCertificates(data:any) {
-   const [open, setOpen] = useState(false);
-   const handleOpen = () => setOpen(!open);
+   /* const [open, setOpen] = useState(false); */
+   /* const handleOpen = () => setOpen(!open); */
    return(
       <Card lang={data.lang} engTitle={"My Certifications👨‍🎓"} itaTitle={"Le mie Certificazioni👨‍🎓"} position={-100}
       engContenuto = {"All my certifications, qualifications and diplomas"}

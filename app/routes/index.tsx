@@ -40,7 +40,7 @@ export default function Index() {
   } */
   
   return (
-    <main className="snap-y snap-mandatory h-screen overflow-scroll lg:scroll-pt-10">
+    <main className="snap-y snap-mandatory h-screen lg:overflow-scroll lg:scroll-pt-10">
       <MyNavBar theme={theme} toggleTheme={toggleTheme} titleBox={titleBox} setTitleBox={setTitleBox} lang={lang} setLang={setLang} isView={inView} worksIsView={worksInView} contactsIsView={contactsInView} homeIsView={homeInView}/>
       <HomeSection titleBox={titleBox} lang={lang} homeSetInView={homeSetInView} />
       <AboutSection lang={lang} products={products} setInView={setInView} />
