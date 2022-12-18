@@ -38,11 +38,13 @@
     "bcryptjs": "^2.4.3",
     "buffer-equal-constant-time": "^1.0.1",
     "clsx": "^1.2.1",
+    "framer-motion": "^7.10.2",
     "isbot": "^3.6.3",
     "octokit": "^2.0.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.4.0",
+    "react-slideshow-image": "^4.1.1",
     "tiny-invariant": "^1.3.1",
     "typewriter-effect": "^2.19.0"
   },

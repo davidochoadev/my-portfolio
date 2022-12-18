@@ -11,10 +11,10 @@ import { useLoaderData } from "@remix-run/react";
 export const loader = async () => {
   return json([
     { id: "TypeScript", value: 45.45 },
-    { id: "JavaScript", value: 55.45 },
-    { id: "HTML" , value: 33.24 },
-    { id: "CSS" , value: 80.32 },
-    { id: "Others", value: 10.43 },
+    { id: "JavaScript", value: 18.18 },
+    { id: "HTML" , value: 9.09 },
+    { id: "CSS" , value: 18.18 },
+    { id: "Others", value: 9.09 },
   ]);
 };
 
@@ -40,10 +40,10 @@ export default function Index() {
   } */
   
   return (
-    <main className="snap-y snap-mandatory h-screen overflow-scroll">
+    <main className="snap-y snap-mandatory h-screen overflow-scroll lg:scroll-pt-10">
       <MyNavBar theme={theme} toggleTheme={toggleTheme} titleBox={titleBox} setTitleBox={setTitleBox} lang={lang} setLang={setLang} isView={inView} worksIsView={worksInView} contactsIsView={contactsInView} homeIsView={homeInView}/>
       <HomeSection titleBox={titleBox} lang={lang} homeSetInView={homeSetInView} />
-      <AboutSection products={products} setInView={setInView} />
+      <AboutSection lang={lang} products={products} setInView={setInView} />
       <WorksSection worksSetInView={worksSetInView} />
       <ContactsSection contactsSetInView={contactsSetInView} />
     </main>

@@ -1,6 +1,8 @@
 import { Typography } from "@material-tailwind/react";
 import { InView } from "react-intersection-observer";
 import Typewriter from "typewriter-effect";
+import { motion } from "framer-motion"
+
 
 
 export default function HomeSection(data: any) {
@@ -9,7 +11,10 @@ export default function HomeSection(data: any) {
   const titleBox = data.titleBox;
 
   return (
-    <section className="relative h-screen flex snap-start">
+    <motion.div
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ duration: 1 }} className="relative h-screen flex snap-start ">
       <InView
         as="div"
         id="home"
@@ -17,7 +22,10 @@ export default function HomeSection(data: any) {
         onChange={homeSetInView}
       />
       <div className="mx-4 md:mx-auto w-full h-full max-h-min flex flex-col md:flex-row md:justify-center">
-        <div id="typography-container" className="w-full lg:w-1/3 pt-16 md:pt-0 lg:w-1/3 md:flex md:items-center md:flex-col md:my-auto md:px-4 pb-4">
+        <div
+        id="typography-container"
+        className="w-full lg:w-1/3 pt-16 md:pt-0 lg:w-1/3 md:flex md:items-center md:flex-col md:my-auto md:px-4 pb-4"
+        >
           <Typography variant="h6" className="w-full font-firacodeBold text-blue-gray-600">
             <Typewriter
               options={{
@@ -63,12 +71,14 @@ export default function HomeSection(data: any) {
             }
           </Typography>
         </div>
-        <div className="h-full w-full md:flex md:items-center md:px-4 lg:w-1/3">
-          <div className="bg-[#33DDB3] rounded-3xl w-full h-5/6 max-h-min mx-auto container md:h-1/2 lg:w-full md:flex md:items-center">
-            <img src="../assets/img/profile.jpg" alt="J.David Ochoa" className="object-contain h-full md:h-5/6 lg:h-5/6 mx-auto rounded-full"/>
+        <div
+        className="h-full w-full md:flex md:items-center md:px-4 lg:w-1/3"
+        >
+          <div className=" shadow-md bg-[#33DDB3] rounded-3xl w-full h-5/6 max-h-min mx-auto container md:h-1/2 lg:w-full md:flex md:items-center">
+            <img src="../assets/img/profile.jpg" alt="J.David Ochoa" className="shadow-md object-contain h-full md:h-5/6 lg:h-5/6 mx-auto rounded-full"/>
           </div>
         </div>
       </div>
-    </section>
+    </motion.div>
   );
 }
