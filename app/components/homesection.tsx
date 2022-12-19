@@ -66,16 +66,17 @@ export default function HomeSection(data: any) {
           }
           <Typography variant="paragraph" className="w-full font-firacode dark:text-white text-[#111827]">
             {lang ?
-              ("I'm a freelance Junior Full-Stack JavaScript/TypeScript & React Developer from Rome in Italy 🇮🇹 with an interest in crypto's and personal finance, in love with my son Noah, my soulmate Mina and felines.") :
-              ("Sono uno Sviluppatore Junior Full-Stack specializzato in JavaScript/Typescript e Sviluppo in ReactJS ed attualmente sono situato a Roma 🇮🇹. Le mie passioni sono le cripto valute, il disegno e la finanza personale. Sono anche un Papà a tempo pieno e sono innamorato di mio figlio Noah e della mia anima gemella Mina, vado matto per gli animali specialmente per i gatti 😼")
+              ("I'm a freelance Junior Full-Stack JavaScript/TypeScript & React Developer from Italy 🇮🇹 with an interest in crypto's and personal finance, in love with my son Noah, my soulmate Mina and felines.") :
+              ("Sono uno Sviluppatore Junior Full-Stack specializzato in JavaScript/Typescript e Sviluppo in ReactJS ed attualmente vivo in Italia 🇮🇹. Le mie passioni sono le cripto valute, il disegno e la finanza personale. Sono anche un Papà a tempo pieno e sono innamorato di mio figlio Noah e della mia anima gemella Mina, vado matto per gli animali specialmente per i gatti 😼")
             }
           </Typography>
         </div>
         <div
-        className="h-full w-full md:flex md:items-center md:px-4 lg:w-1/3"
+        className="h-full w-full md:flex md:items-center md:px-4 lg:w-1/2 lg:max-w-md group transition duration-300 ease-in"
         >
-          <div className=" shadow-md bg-[#33DDB3] rounded-3xl w-full h-5/6 max-h-min mx-auto container md:h-1/2 lg:w-full md:flex md:items-center">
-            <img src="../assets/img/profile.jpg" alt="J.David Ochoa" className="shadow-md object-contain h-full md:h-5/6 lg:h-5/6 mx-auto rounded-full"/>
+          <div className="relative cursor-pointer flex flex-col justify-center shadow-md bg-[#33DDB3] rounded-3xl w-full h-auto p-2 max-h-min mx-auto container md:h-1/2 lg:w-5/6 md:flex md:items-center group-hover:rounded-full group-hover:scale-[0.8] transition duration-300 ease-in">
+            <img src="../assets/img/profile.jpg" alt="J.David Ochoa" className="group-hover:grayscale shadow-md object-contain w-full md:h-5/6 md:w-auto lg:w-auto mx-auto rounded-full lg:group-hover:scale-[1.5] group-hover:scale-[1.3] transition duration-300 ease-in"/>
+            <Typography className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 invisible group-hover:visible group-hover:scale-[1.3] lg:group-hover:scale-[1.5] font-firacodeBold text-[#33DDB3] bg-white w-5/6 lg:w-1/2 text-center">MORE ABOUT ME?</Typography>
           </div>
         </div>
       </div>

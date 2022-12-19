@@ -68,7 +68,7 @@ export default function MyNavBar(data: any) {
   );
  
   return (
-    <Navbar className="fixed top-0 left-0 right-0 z-10 mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4 dark:bg-blue-gray-900 border-0" shadow={true} blurred={false} >
+    <Navbar className="fixed top-0 left-0 right-0 z-10 mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4 dark:bg-[#10172a] border-0" shadow={true} blurred={false} >
       <div className="container mx-auto flex items-center">
         <NavLink to="#home" className="mr-4 cursor-pointer py-1.5 grow tracking-wide flex items-center">
           <Typography

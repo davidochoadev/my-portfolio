@@ -39,7 +39,7 @@ function App() {
           <Meta />
           <Links />
         </head>
-        <body className="h-full dark:bg-[#111827] bg-[#E8F2FF]">
+        <body className="h-full dark:bg-[#1e293b] bg-[#E8F2FF]">
           <Outlet />
           <ScrollRestoration />
           <Scripts />
