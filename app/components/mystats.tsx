@@ -79,7 +79,7 @@ export function MyCard(data: any){
                </Button>
             </div>
          </motion.div>
-         <Dialog open={open} handler={handleOpen} className="rounded-3xl w-11/12 lg:w-screen md:max-w-screen-md lg:max-w-screen-lg max-w-max h-5/6 max-h-full flex flex-col">
+         <Dialog open={open} handler={handleOpen} className="pb-14 rounded-3xl w-11/12 lg:w-screen md:max-w-screen-md lg:max-w-screen-lg max-w-max h-11/12 max-h-full flex flex-col">
             <DialogHeader className="flex flex-row">
                <Typography className="grow font-goodbrush text-center justify-center text-base md:text-lg lg:text-2xl">
                   {data.lang ? (data.title):(data.italianTitle)}
@@ -129,7 +129,7 @@ export function MyLangsStats(data : any) {
 
 export function MyCodingLangs(data:any) {
 return(
-   <div className="w-full">
+   <div className="w-3/4 flex-grow flex justify-center mx-auto">
       {data.children}
    </div>
 )

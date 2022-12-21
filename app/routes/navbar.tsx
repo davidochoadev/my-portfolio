@@ -37,7 +37,7 @@ export default function MyNavBar(data: any) {
           color="white"
           className={aboutIsView ? "p-1 font-firacodeMedium tracking-wider text-[#33DDB3]" : "transition delay-150 hover:text-[#33DDB3] p-1 font-firacodeMedium tracking-wider text-blue-gray-300"}
         >
-          {lang ? ("About Me"):("Chi sono?")}
+          {lang ? ("About Me"):("Su di me")}
         </Typography>
       </NavLink>
       <NavLink
