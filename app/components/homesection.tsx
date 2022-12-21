@@ -21,7 +21,7 @@ export default function HomeSection(data: any) {
         className="absolute top-0 h-4 w-full"
         onChange={homeSetInView}
       />
-      <div className="mx-4 md:mx-auto w-full h-full max-h-min flex flex-col md:flex-row md:justify-center">
+      <div className="mx-4 justify-center md:mx-auto w-full h-full max-h-min flex flex-col items-center md:flex-row md:justify-center">
         <div
         id="typography-container"
         className="w-full lg:w-1/3 pt-16 md:pt-0 lg:w-1/3 md:flex md:items-center md:flex-col md:my-auto md:px-4 pb-4"
@@ -71,10 +71,8 @@ export default function HomeSection(data: any) {
             }
           </Typography>
         </div>
-        <div
-        className="h-full w-full md:flex md:items-center md:px-4 lg:w-1/2 lg:max-w-md group transition duration-300 ease-in"
-        >
-          <div className="relative cursor-pointer flex flex-col justify-center shadow-md bg-[#33DDB3] rounded-3xl w-full h-auto p-2 max-h-min mx-auto container md:h-1/2 lg:w-5/6 md:flex md:items-center group-hover:rounded-full group-hover:scale-[0.8] transition duration-300 ease-in">
+        <div className="md:h-full w-full md:flex md:items-center md:px-4 lg:w-1/2 lg:max-w-md group transition duration-300 ease-in">
+          <div className="relative cursor-pointer flex flex-col justify-center shadow-md bg-[#33DDB3] rounded-3xl w-full h-min md:h-auto p-2 max-h-min mx-auto container md:h-1/2 lg:w-5/6 md:flex md:items-center group-hover:rounded-full group-hover:scale-[0.8] transition duration-300 ease-in">
             <img src="../assets/img/profile.jpg" alt="J.David Ochoa" className="group-hover:grayscale shadow-md object-contain w-full md:h-5/6 md:w-auto lg:w-auto mx-auto rounded-full lg:group-hover:scale-[1.5] group-hover:scale-[1.3] transition duration-300 ease-in"/>
             <Typography className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 invisible group-hover:visible group-hover:scale-[1.3] lg:group-hover:scale-[1.5] font-firacodeBold text-[#33DDB3] bg-white w-5/6 lg:w-1/2 text-center">MORE ABOUT ME?</Typography>
           </div>

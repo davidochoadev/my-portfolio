@@ -1,6 +1,6 @@
-import { Typography, Progress } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 import { InView } from "react-intersection-observer";
-import { MyCertificates, MyCodingLangs, MyLangsStats, MyPresentation, MyCard } from "./mystats";
+import { MyCard } from "./mystats";
 
 export default function AboutSection(data: any) {
   const setInView = data.setInView;
@@ -31,13 +31,16 @@ export default function AboutSection(data: any) {
  )
   
   return (
-    <section className="relative h-screen flex justify-center snap-start">
+    <section className="relative h-screen flex flex-col justify-center snap-start">
       <InView
         as="div"
         id="about"
         className="absolute top-0.5 h-2 w-full"
         onChange={setInView}
       />
+      <Typography as="div" id="title-about-section" className="text-[#33DDB3] font-goodbrush text-center" variant="h2">
+        {data.lang ? ("About Me") : ("Su di Me")}
+      </Typography>
       <div id="about-section"className="gap-4 shadow-md overflow-hidden py-4 mx-4 bg-inherit lg:shadow-none w-full h-5/6 rounded-3xl self-center flex justify-start flex-col md:flex-row md:flex-wrap relative lg:gap-4 md:justify-center">
         <MyCard lang={data.lang} dialogElement={1} products={products} preview={true} title={"My Coding Stats 🧑🏻‍💻"} italianTitle={"Le mie Statistiche 🧑🏻‍💻"} engContenuto={"These are the coding languages ​​that i've been using on GitHub."} itaContenuto={"Questi sono i linguaggio di programmazione che ho utilizzato di più su GitHub."} position={-100}>
           <div id="container-stats-1" className="w-full group-hover:hidden flex flex-col items-center">
