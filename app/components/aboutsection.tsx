@@ -54,7 +54,7 @@ export default function AboutSection(data: any) {
             {itemsList}
         </div>
         </MyCard>
-        <MyCard lang={data.lang} preview={false} title={"My Certifications 👨‍🎓"} italianTitle={"Le Mie Certificazioni 👨‍🎓"} engContenuto={"All my certifications, qualifications and diplomas"} itaContenuto={"Tutte le mie Certificazioni, Attestati e Diplomi."} position={-100}>
+        <MyCard dialogElement={3} lang={data.lang} preview={false} title={"My Certifications 👨‍🎓"} italianTitle={"Le Mie Certificazioni 👨‍🎓"} engContenuto={"All my certifications, qualifications and diplomas"} itaContenuto={"Tutte le mie Certificazioni, Attestati e Diplomi."} position={-100}>
         <Typography>gino</Typography>
         </MyCard>
         <MyCard lang={data.lang} preview={false} title={"My Resume/CV 💼"} italianTitle={"Il Mio Curriculum Vitae 💼"} engContenuto={"You can check my Virtual Resume/CV here."} itaContenuto={"Puoi vedere il mio Curriculum Vitae direttamente qui!"} position={-100}>
