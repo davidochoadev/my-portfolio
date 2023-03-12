@@ -1,10 +1,13 @@
 # J.David Ochoa Portfolio App - With Remix Indie Stack
-![The Remix Indie Stack](https://repository-images.githubusercontent.com/465928257/a241fa49-bd4d-485a-a2a5-5cb8e4ee0abf)
+
+![David Ochoa Portfolio App](../assets/screen.png)
 
 Hi! My name is David and this is my app created with Remix Indie Stack.
+
 > 🇮🇹 - Ciao! Mi chiamo David e questa è la mia app creata con la Remix Indie Stack.
 
 Learn more about [Remix Stacks](https://remix.run/stacks). If you want to create your personal app, you can use:
+
 > 🇮🇹 - Scopri di più sulle varie [Stacks di Remix](https://remix.run/stacks). Se vuoi creare la tua applicazione personale, puoi utilizzare:
 
 ```
@@ -28,13 +31,14 @@ npx create-remix@latest --template remix-run/indie-stack
 - Static Types with [TypeScript](https://typescriptlang.org)
 
 Not a fan of bits of the stack? Fork it, change it, and use `npx create-remix --template your/repo`! Make it your own.
+
 > 🇮🇹 - Non trovi nessuno stack di tuo gradimento? Effettua un fork, cambialo ed utilizza `npx create-remix --template your/repo`! Creane uno tuo.
 
 ## Quickstart | Come cominciare
 
 Click this button to create a [Gitpod](https://gitpod.io) workspace with the project set up and Fly pre-installed
-> 🇮🇹 - Clicca questo bottone per creare un [Gitpod](https://gitpod.io), uno spazio di lavoro predefinito con il progetto già configurato e pre-installato.
 
+> 🇮🇹 - Clicca questo bottone per creare un [Gitpod](https://gitpod.io), uno spazio di lavoro predefinito con il progetto già configurato e pre-installato.
 
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/from-referrer/)
 
@@ -132,7 +136,8 @@ Now that everything is set up you can commit and push your changes to your repo.
 
 ### Connecting to your database
 
-The sqlite database lives at `/data/sqlite.db` in your deployed application. You can connect to the live database by running 
+The sqlite database lives at `/data/sqlite.db` in your deployed application. You can connect to the live database by running
+
 ```sh
 flyctl ssh console -C database-cli
 ```
