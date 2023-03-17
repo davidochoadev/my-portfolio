@@ -284,19 +284,27 @@ export function MyResume(data: any) {
                   <h6 className="text-md md:text-lg lg:text-xl font-firacodeBold tracking-widest uppercase text-[#33DDB3] self-center text-center md:justify-self-start">
                      {data.lang ? ("Skills") : ("Skills")}
                   </h6>
-                  <ul>
-                     <li className="font-firacode text-sm">- JavaScript</li>
-                     <li className="font-firacode text-sm">- HTML</li>
-                     <li className="font-firacode text-sm">- CSS</li>
-                     <li className="font-firacode text-sm">- TypeScript</li>
-                     <li className="font-firacode text-sm">- Node.Js</li>
-                     <li className="font-firacode text-sm">- React</li>
-                     <li className="font-firacode text-sm">- PostgreSQL | MySQL | SQLite | MongoDB </li>
-                     <li className="font-firacode text-sm">- Remix | Next.Js | SvelteKit</li>
-                     <li className="font-firacode text-sm">- Joomla | Wordpress</li>
-                     <li className="font-firacode text-sm">- Adobe Illustrator | Photoshop </li>
-                     <li className="font-firacode text-sm">- Figma</li>
-                  </ul>
+                  <div id="TechContainerPic" className="bg-white p-4 rounded-lg shadow-md flex flex-row flex-wrap gap-2 md:gap-2 items-center md:my-0 lg:my-0 justify-center md:flex-grow">
+                     <img src="https://user-images.githubusercontent.com/1500684/157764276-a516a239-e377-4a20-b44a-0ac7b65c8c14.svg" alt="TailwindCSS" 
+                     className="h-10 w-32 opacity-80 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"></img>
+                     <img src="https://user-images.githubusercontent.com/1500684/157764397-ccd8ea10-b8aa-4772-a99b-35de937319e1.svg" alt="Fly.io" className="block h-12 w-24 opacity-80 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"></img>
+                     <img src="https://user-images.githubusercontent.com/1500684/157764484-ad64a21a-d7fb-47e3-8669-ec046da20c1f.svg" alt="Prisma ORM" className="h-10 w-20 opacity-80 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"></img>
+                     <img src="https://user-images.githubusercontent.com/1500684/157773063-20a0ed64-b9f8-4e0b-9d1e-0b65a3d4a6db.svg" alt="TypeScript" className="h-14 w-14  opacity-60 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"></img>
+                     <img src="https://seeklogo.com/images/R/remix-logo-862D8B1019-seeklogo.com.png" alt="Remix.run" className="h-14 w-14  opacity-60 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"></img>
+                     <img src="https://seeklogo.com/images/J/javascript-js-logo-2949701702-seeklogo.com.png" alt="JavaScript" className="h-14 w-14  opacity-60 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"></img>
+                     <img src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png" alt="NodeJS" className="h-14 w-13  opacity-60 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"></img>
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="ReactJS" className="h-14 w-16  opacity-60 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"></img>
+                     <img src="https://seeklogo.com/images/S/sqlite-logo-5E9F462E6A-seeklogo.com.png" alt="SQLite" className="h-11 w-24  opacity-100 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"></img>
+                     <img src="https://seeklogo.com/images/P/postgresql-logo-6DBC096ED4-seeklogo.com.png" alt="PostgreSQL" className="block h-8 w-32  opacity-100 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"></img>
+                     <img src="https://seeklogo.com/images/D/docker-inc-logo-4A9A703EFB-seeklogo.com.png" alt="Docker" className="block h-8 w-32  opacity-100 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"></img>
+                     <img src="https://seeklogo.com/images/A/adobe-photoshop-logo-7B88D7B5AA-seeklogo.com.png" alt="Photoshop" className="block h-14 w-14  opacity-60 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"></img>
+                     <img src="https://seeklogo.com/images/A/adobe-illustrator-logo-775FAF240B-seeklogo.com.png" alt="Illustrator" className="block h-14 w-14  opacity-60 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"></img>
+                     <img src="https://seeklogo.com/images/A/adobe-after-effects-logo-960B473FE4-seeklogo.com.png" alt="After Effects" className="block h-14 w-14  opacity-60 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"></img>
+                     <img src="https://yoolk.ninja/wp-content/uploads/2020/06/Apps-Clip-Studio-Paint-1024x1024.png" alt="Clip Studio Paint" className="block h-14 w-14  opacity-60 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"></img>
+                     <img src="https://seeklogo.com/images/H/html5-without-wordmark-color-logo-14D252D878-seeklogo.com.png" alt="HTML" className="block h-14 w-12  opacity-60 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"></img>
+                     <img src="https://seeklogo.com/images/C/css-3-logo-023C1A7171-seeklogo.com.png" alt="CSS3" className="block h-14 w-12  opacity-60 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"></img>
+                     <img src="https://seeklogo.com/images/F/figma-logo-E4E21D3AEA-seeklogo.com.png" alt="Figma" className="block h-14 w-10  opacity-60 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"></img>
+                  </div>
                </div>
             </div>
          </div>
