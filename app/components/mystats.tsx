@@ -105,7 +105,11 @@ export function MyCard(data: any){
                <Typography className="font-firacode text-center text-sm">
                {data.lang ? (data.engContenuto) : (data.itaContenuto)}
                </Typography>
-               {data.dialogElement === 1 && (<MyLangsStats>{data.children}</MyLangsStats>) || data.dialogElement === 2 && (<MyCodingLangs>{data.children}</MyCodingLangs>) || data.dialogElement === 3 && (<MyCertificates lang={data.lang}/>) || data.dialogElement === 4 && (<MyResume/>)}
+               {data.dialogElement === 1 && (<MyLangsStats>{data.children}</MyLangsStats>) 
+               || data.dialogElement === 2 && (<MyCodingLangs>{data.children}</MyCodingLangs>) 
+               || data.dialogElement === 3 && (<MyCertificates lang={data.lang}/>) 
+               || data.dialogElement === 4 && (<MyResume lang={data.lang}/>)
+               }
             </DialogBody>
          </Dialog>
       </Fragment>
@@ -205,6 +209,7 @@ export function MyCertificates(data:any) {
          <Certificate engTitle={"Upper-Intermediate English: Business and Industry | Universitat Politècnica de València"} itaTitle={"Upper-Intermediate English: Business and Industry | Universitat Politècnica de València"} engContenuto={`This course was designed for students with an intermediate level of English looking to reach a higher intermediate level.The course covers interesting topics such a successful businesses, risk management, industrial design and radio broadcasting. This course also includes preparatory materials and recommendations to take the Cambridge University First Certificate in English Examination (FCE).`} itaContenuto={`Questo corso è stato progettato per studenti con un livello intermedio di inglese che cercano di raggiungere un livello intermedio superiore. Il corso copre argomenti interessanti come le imprese di successo, la gestione del rischio, il design industriale e la radiodiffusione. Questo corso include anche materiali preparatori e raccomandazioni per sostenere l'esame di Cambridge University First Certificate in English (FCE).`} lang={data.lang} imgUrl={"../assets/img/certificati/2.png"}/>
          <Certificate lang={data.lang} imgUrl={"../assets/img/certificati/javascriptfcc.jpeg"} itaTitle={"JavaScript Algorithms and Data Structures | Rilasciato da FreeCodeCamp.org"} engTitle={"JavaScript Algorithms and Data Structures"}/>
          <Certificate lang={data.lang} imgUrl={"../assets/img/certificati/responsivefcc.jpeg"} engTitle={"Responsive Web Design"} itaTitle={"Responsive Web Design | Rilasciato da FreeCodeCamp.org"}/>
+         <Certificate lang={data.lang} imgUrl={"../assets/img/certificati/reactbasic.png"} itaTitle={"Basi di React"} engTitle={"React Basic | HackerRank"} />
       </div>
 /*       <Fragment>
          <motion.div
@@ -229,11 +234,73 @@ export function MyCertificates(data:any) {
 
 export function MyResume(data: any) {
    return (
-      <Card lang={data.lang} engTitle={"English Title"} itaTitle={"Italian Title"} position={100}
-      engContenuto = {"This is an example box"}
-      itaContenuto = {"Questo è un box d'esempio!"}
-      >
-      </Card>
+      <div className="h-full w-full">
+         <div className="w-full h-full bg-white shadow-md rounded-3xl my-4 mx-2">
+            <div className="dark:bg-[#1e293b] md:w-1/3 rounded-3xl shadow-md h-full pb-10">
+               <img src="../assets/img/profile.jpg" alt="David Ochoa" className="p-10 rounded-full"/>
+               <h5 className="text-md md:text-lg lg:text-2xl font-goodbrush text-[#33DDB3] self-center text-center md:justify-self-start">
+               J.David Ochoa Arroba
+               </h5>
+               <p className="flex justify-center items-center grow font-firacode p-2 text-center text-sm md:text-base">
+                  Junior Full-Stack Web Developer
+               </p>
+               <hr className="border-blue-gray-500"/>
+               <div id="contacts-block" className="space-y-2 px-4 py-2">
+                  <h6 className="text-md md:text-lg lg:text-xl font-firacodeBold tracking-widest uppercase text-[#33DDB3] self-center text-center md:justify-self-start">
+                     {data.lang ? ("Contacts") : ("Contatti")}
+                  </h6>
+                  <p className="text-left font-firacode">
+                  📞 +39 351 790 8366
+                  </p>
+                  <p className="text-left font-firacode">
+                  📧 davidochoa.dev@gmail.com
+                  </p>
+                  <p className="text-left font-firacode">
+                  📍 Rome, Italy
+                  </p>
+               </div>
+               <hr className="border-blue-gray-500"/>
+               <div id="education-block" className="space-y-2 px-4 py-2">
+                  <h6 className="text-md md:text-lg lg:text-xl font-firacodeBold tracking-widest uppercase text-[#33DDB3] self-center text-center md:justify-self-start">
+                     {data.lang ? ("Education") : ("Educazione")}
+                  </h6>
+                  <ul>
+                     <li className="text-left font-firacode text-sm">
+                     <p className="text-center text-[#33DDB3]">2012 - 2017</p>
+                     {data.lang ? ("- Technical and Professional Institute Diploma Technological Sector, Computer Systems Networks and Telecommunications, Specialization in 'Computer Science'") : ("Diploma Istituto Tecnico e Professionale Settore Tecnologico, Reti di Sistemi Informatici e telecomunicazioni articolazione 'Informatica'.")}
+                     </li>
+                     <li className="text-left font-firacode text-sm">
+                     <p className="text-center text-[#33DDB3]">2017 - 2021</p>
+                     {data.lang ? ("- Bachelor degree in Nursing science") : ("Laurea Triennale, Scienze Infermieristiche")}
+                     </li>
+                     <li className="text-left font-firacode text-sm">
+                     <p className="text-center text-[#33DDB3]">05/2021 - 07/2021</p>
+                     {data.lang ? ("- Intensive Coding Bootcamp Junior Web Developer") : ("Corso Intensivo Junior Web Developer")}
+                     </li>
+                  </ul>
+               </div>
+               <hr className="border-blue-gray-500"/>
+               <div id="skills-block" className="space-y-2 px-4 py-2">
+                  <h6 className="text-md md:text-lg lg:text-xl font-firacodeBold tracking-widest uppercase text-[#33DDB3] self-center text-center md:justify-self-start">
+                     {data.lang ? ("Skills") : ("Skills")}
+                  </h6>
+                  <ul>
+                     <li className="font-firacode text-sm">- JavaScript</li>
+                     <li className="font-firacode text-sm">- HTML</li>
+                     <li className="font-firacode text-sm">- CSS</li>
+                     <li className="font-firacode text-sm">- TypeScript</li>
+                     <li className="font-firacode text-sm">- Node.Js</li>
+                     <li className="font-firacode text-sm">- React</li>
+                     <li className="font-firacode text-sm">- PostgreSQL | MySQL | SQLite | MongoDB </li>
+                     <li className="font-firacode text-sm">- Remix | Next.Js | SvelteKit</li>
+                     <li className="font-firacode text-sm">- Joomla | Wordpress</li>
+                     <li className="font-firacode text-sm">- Adobe Illustrator | Photoshop </li>
+                     <li className="font-firacode text-sm">- Figma</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
    )
 }
 
