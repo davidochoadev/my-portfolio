@@ -41,7 +41,9 @@ export default function AboutSection(data: any) {
       <Typography as="div" id="title-about-section" className="text-[#33DDB3] font-goodbrush text-center" variant="h2">
         {data.lang ? ("About Me") : ("Su di Me")}
       </Typography>
+      {/* CONTAINER OF ABOUT SECTION */}
       <div id="about-section"className="gap-4 shadow-md overflow-hidden py-4 px-4 bg-inherit lg:shadow-none w-full h-3/4 rounded-3xl self-center flex justify-start flex-col md:flex-row md:flex-wrap relative lg:gap-4 md:justify-center">
+        {/* CONTAINER OF THE CARD ABOUT CODING STATS OF PROFILE */}
         <MyCard lang={data.lang} dialogElement={1} products={products} preview={false} title={"My Coding Stats 🧑🏻‍💻"} italianTitle={"Le mie Statistiche 🧑🏻‍💻"} engContenuto={"These are my coding languages, WakaTime & GitHub Stats"} itaContenuto={"Queste sono le statistiche dei miei linguaggio di programmazione, di WakaTime e GitHub."} position={-100}>
           <div id="container-stats-1" className="w-full group-hover:hidden flex flex-col items-center">
             <a href="https://github.com/davideochoaa" className="my-2">
@@ -49,14 +51,20 @@ export default function AboutSection(data: any) {
             </a>
           </div>
         </MyCard>
+        
+        {/* CONTAINER OF THE CARD ABOUT TECH AND SKILLS THAT I USE */}
         <MyCard lang={data.lang} dialogElement={2} preview={false} title={"Technologies and Skills ⚛️"} italianTitle={"Tecnologie ed Abilità ⚛️"} engContenuto={"Check my Favorite Frameworks, Coding Languages, Softwares and Technologies."} itaContenuto={"I Frameworks, Software, Linguaggi di Programmazione e Tecnologie che preferisco."} position={-100}>
         <div id="gino" className="flex justify-center flex-grow lg:w-full items-center lg:flex lg:mx-auto">
             {itemsList}
         </div>
         </MyCard>
+
+        {/* CONTAINER OF THE CARD ABOUT MY CERTIFICATIONS */}
         <MyCard dialogElement={3} lang={data.lang} preview={false} title={"My Certifications 👨‍🎓"} italianTitle={"Le Mie Certificazioni 👨‍🎓"} engContenuto={"All my certifications, qualifications and diplomas"} itaContenuto={"Tutte le mie Certificazioni, Attestati e Diplomi."} position={-100}>
         <Typography>gino</Typography>
         </MyCard>
+
+        {/* CONTAINER OF THE CARD ABOUT MY RESUME */}
         <MyCard dialogElement={4} lang={data.lang} preview={false} title={"My Resume/CV 💼"} italianTitle={"Il Mio Curriculum Vitae 💼"} engContenuto={"You can check my Virtual Resume/CV here."} itaContenuto={"Puoi vedere il mio Curriculum Vitae direttamente qui!"} position={-100}>
         <Typography>gino</Typography>
         </MyCard>

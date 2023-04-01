@@ -79,7 +79,7 @@ export function MyCard(data: any){
                </Button>
             </div>
          </motion.div>
-         <Dialog open={open} handler={handleOpen} className="pb-14 rounded-3xl w-11/12 lg:w-screen md:max-w-screen-md lg:max-w-screen-lg max-w-max h-11/12 max-h-full flex flex-col">
+         <Dialog open={open} handler={handleOpen} className="pb-14 rounded-3xl w-11/12 lg:w-screen md:max-w-screen-md lg:max-w-screen-lg max-w-max h-11/12 max-h-full flex flex-col overflow-auto">
             <DialogHeader className="flex flex-row">
                <Typography className="grow font-goodbrush text-center justify-center text-base md:text-lg lg:text-2xl">
                   {data.lang ? (data.title):(data.italianTitle)}
@@ -101,7 +101,7 @@ export function MyCard(data: any){
                   </svg>
                </IconButton>
             </DialogHeader>
-            <DialogBody divider className="flex flex-col p-2 overflow-auto">
+            <DialogBody divider className="flex flex-col p-2">
                <Typography className="font-firacode text-center text-sm">
                {data.lang ? (data.engContenuto) : (data.itaContenuto)}
                </Typography>
@@ -285,8 +285,7 @@ export function MyResume(data: any) {
                      {data.lang ? ("Skills") : ("Skills")}
                   </h6>
                   <div id="TechContainerPic" className="bg-white p-4 rounded-lg shadow-md flex flex-row flex-wrap gap-2 md:gap-2 items-center md:my-0 lg:my-0 justify-center md:flex-grow">
-                     <img src="https://user-images.githubusercontent.com/1500684/157764276-a516a239-e377-4a20-b44a-0ac7b65c8c14.svg" alt="TailwindCSS" 
-                     className="h-10 w-32 opacity-80 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"></img>
+                     <img src="https://user-images.githubusercontent.com/1500684/157764276-a516a239-e377-4a20-b44a-0ac7b65c8c14.svg" alt="TailwindCSS" className="h-10 w-32 opacity-80 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"></img>
                      <img src="https://user-images.githubusercontent.com/1500684/157764397-ccd8ea10-b8aa-4772-a99b-35de937319e1.svg" alt="Fly.io" className="block h-12 w-24 opacity-80 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"></img>
                      <img src="https://user-images.githubusercontent.com/1500684/157764484-ad64a21a-d7fb-47e3-8669-ec046da20c1f.svg" alt="Prisma ORM" className="h-10 w-20 opacity-80 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"></img>
                      <img src="https://user-images.githubusercontent.com/1500684/157773063-20a0ed64-b9f8-4e0b-9d1e-0b65a3d4a6db.svg" alt="TypeScript" className="h-14 w-14  opacity-60 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"></img>
