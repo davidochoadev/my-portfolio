@@ -44,8 +44,8 @@ export default function AboutSection(data: any) {
       <div id="about-section"className="gap-4 shadow-md overflow-hidden py-4 px-4 bg-inherit lg:shadow-none w-full h-3/4 rounded-3xl self-center flex justify-start flex-col md:flex-row md:flex-wrap relative lg:gap-4 md:justify-center">
         <MyCard lang={data.lang} dialogElement={1} products={products} preview={false} title={"My Coding Stats 🧑🏻‍💻"} italianTitle={"Le mie Statistiche 🧑🏻‍💻"} engContenuto={"These are my coding languages, WakaTime & GitHub Stats"} itaContenuto={"Queste sono le statistiche dei miei linguaggio di programmazione, di WakaTime e GitHub."} position={-100}>
           <div id="container-stats-1" className="w-full group-hover:hidden flex flex-col items-center">
-            <a href="https://github.com/davideochoaa" className="my-2">
-              <img alt="David Stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=davideochoaa&layout=compact&hide_border=true&title_color=33DDB3" />
+            <a href="https://github.com/davideochoadev" className="my-2">
+              <img alt="David Stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=davideochoadev&layout=compact&hide_border=true&title_color=33DDB3" />
             </a>
           </div>
         </MyCard>
