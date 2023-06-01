@@ -122,10 +122,10 @@ export function MyLangsStats(data : any) {
      <div className="md:w-1/3 h-1/4 md:h-min">
      {data.children}
      </div>
-     <img className="md:w-1/2 h-1/4 md:h-min" alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=davideochoaa&hide_border=true&title_color=33DDB3&icon_color=33DDB3&hide=contribs,prs&show_icons=true&theme=default#gh-light-mode-only&include-all-commits=true" />
-     <img className="md:w-1/2 h-1/4 md:h-min" alt="Wakatime Stats" src="https://github-readme-stats.vercel.app/api/wakatime?username=davideochoaa&title_color=33DDB3&hide_border=true&custom_title=Spent on Coding" />
-     <a href="https://github.com/davideochoaa" className="my-2 md:w-1/3 h-1/4 md:h-min">
-        <img alt="David Stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=davideochoaa&langs_count=5&hide_border=true&title_color=33DDB3&hide_title=true" />
+     <img className="md:w-1/2 h-1/4 md:h-min" alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=davidochoadev&hide_border=true&title_color=33DDB3&icon_color=33DDB3&hide=contribs,prs&show_icons=true&theme=default#gh-light-mode-only&include-all-commits=true" />
+     <img className="md:w-1/2 h-1/4 md:h-min" alt="Wakatime Stats" src="https://github-readme-stats.vercel.app/api/wakatime?username=davidochoadev&title_color=33DDB3&hide_border=true&custom_title=Spent on Coding" />
+     <a href="https://github.com/davidochoadev" className="my-2 md:w-1/3 h-1/4 md:h-min">
+        <img alt="David Stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=davidochoadev&langs_count=5&hide_border=true&title_color=33DDB3&hide_title=true" />
      </a>
    </div>
    )
