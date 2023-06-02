@@ -18,3 +18,15 @@ export function getWork(
       take: 10
    });
  }
+
+ export function createWork({title, picture_url, preview_url, repo_url }: Pick<Work, "title" | "picture_url" | "preview_url" | "repo_url" >
+ ){
+   return prisma.work.create({
+      data: {
+        title,
+        picture_url,
+        preview_url,
+        repo_url
+      },
+    });
+ }

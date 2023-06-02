@@ -38,6 +38,9 @@ export default function NotesPage() {
           <Link to="new" className="block p-4 text-xl text-blue-500">
             + New Note
           </Link>
+          <Link to="new-work" className="block p-4 text-xl text-blue-500">
+            + New Work
+          </Link>
 
           <hr />
 
