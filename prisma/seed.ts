@@ -1,15 +1,34 @@
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs";
+import works from "./works.json";
 
 const prisma = new PrismaClient();
 
 async function seed() {
   const email = "davideochoa.dev@gmail.com";
 
+  const data = Array.from(works).map(data => ({
+    title : data.title || "",
+    picture_url: data.picture_url || "",
+    preview_url: data.preview_url || "",
+    repo_url: data.repo_url || "",
+  }));
+
   // cleanup the existing database
   await prisma.user.delete({ where: { email } }).catch(() => {
     // no worries if it doesn't exist yet
   });
+
+  for(var i = 0; i < works.length; i++) {
+    await prisma.work.create({
+      data : {
+        title : works[i].title || "",
+        picture_url: works[i].picture_url || "",
+        preview_url: works[i].preview_url || "",
+        repo_url: works[i].repo_url || "",
+      }
+    });
+  };
 
   const hashedPassword = await bcrypt.hash("racheliscool", 10);
 

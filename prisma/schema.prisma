@@ -33,6 +33,14 @@ model Password {
   userId String @unique
 }
 
+model Work {
+  id Int @id @default(autoincrement())
+  title String
+  picture_url String
+  preview_url String
+  repo_url String
+}
+
 model Coding {
   id String @id @default(cuid())
   user   User @relation(fields: [userId], references: [id])

@@ -3,7 +3,7 @@ import { InView } from "react-intersection-observer";
 export default function ContactsSection(data: any) {
   const contactsSetInView = data.contactsSetInView;
   return (
-    <section className="relative h-screen bg-blue-gray-900 snap-start">
+    <section className="relative h-screen snap-start">
       <InView
         as="div"
         id="contacts"

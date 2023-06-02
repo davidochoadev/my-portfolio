@@ -1,0 +1,26 @@
+[
+   {
+      "title":"QR Code Component",
+      "picture_url":"https://github.com/davidochoadev/qr-code-component-main/blob/main/design/desktop-preview.jpg?raw=true",
+      "preview_url":"https://davidochoadev.github.io/qr-code-component-main/",
+      "repo_url":"https://github.com/davidochoadev/qr-code-component-main"
+   },
+   {
+      "title":"NFT Preview Card",
+      "picture_url":"https://github.com/davidochoadev/nft-preview-card/blob/main/design/desktop-preview.jpg?raw=true",
+      "preview_url":"https://davidochoadev.github.io/nft-preview-card/",
+      "repo_url":"https://github.com/davidochoadev/nft-preview-card"
+   },
+   {
+      "title":"Order Summary Component",
+      "picture_url":"https://github.com/davidochoadev/order-summary-component/blob/main/design/desktop-preview.jpg?raw=true",
+      "preview_url":"https://davidochoadev.github.io/order-summary-component",
+      "repo_url":"https://github.com/davidochoadev/order-summary-component"
+   },
+   {
+      "title":"Product Preview Card Component",
+      "picture_url":"https://github.com/davidochoadev/product-preview-card-component/blob/main/assets/design/desktop-preview.jpg?raw=true",
+      "preview_url":"https://davidochoadev.github.io/product-preview-card-component",
+      "repo_url":"https://github.com/davidochoadev/product-preview-card-component"
+   }
+]
