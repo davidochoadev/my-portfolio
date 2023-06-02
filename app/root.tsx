@@ -12,8 +12,10 @@ import {
 import tailwindStylesheetUrl from "./styles/tailwind.css";
 import globals from "./styles/globals.css";
 import { getUser } from "./session.server";
+
 import { ThemeProvider, useTheme } from './utils/theme-provider';
 import { clsx } from "clsx";
+import { getWorks } from "./models/works.server";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: tailwindStylesheetUrl },{rel: "stylesheet" , href: globals}];
@@ -28,11 +30,13 @@ export const meta: MetaFunction = () => ({
 export async function loader({ request }: LoaderArgs) {
   return json({
     user: await getUser(request),
+    works: await getWorks(),
   });
 }
 
 function App() {
   const [theme] = useTheme();
+
   return (
       <html lang="en" className={clsx(theme)}>
         <head>

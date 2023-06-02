@@ -5,17 +5,20 @@ import HomeSection from "~/components/homesection";
 import WorksSection from "~/components/workssection";
 import MyNavBar from "./navbar";
 import { Theme, useTheme } from "../utils/theme-provider";
+import type { LoaderArgs} from "@remix-run/node";
 import { json } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import { useLoaderData, useMatches } from "@remix-run/react";
 
-export const loader = async () => {
-  return json([
+export const loader = async ({ request }: LoaderArgs) => {
+  return json(
+    [
     { id: "TypeScript", value: 45.45 },
     { id: "JavaScript", value: 18.18 },
     { id: "HTML" , value: 9.09 },
     { id: "CSS" , value: 18.18 },
     { id: "Others", value: 9.09 },
-  ]);
+  ]
+  );
 };
 
 export default function Index() {
@@ -28,8 +31,8 @@ export default function Index() {
   const [homeInView, homeSetInView] = useState(false);
   const [theme, setTheme] = useTheme();
   const products = useLoaderData<typeof loader>();
+  const works = useMatches()[0].data.works;
   
-
   const toggleTheme = () => {
     setTheme(theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT);
   };
@@ -44,7 +47,7 @@ export default function Index() {
       <MyNavBar theme={theme} toggleTheme={toggleTheme} titleBox={titleBox} setTitleBox={setTitleBox} lang={lang} setLang={setLang} isView={inView} worksIsView={worksInView} contactsIsView={contactsInView} homeIsView={homeInView}/>
       <HomeSection titleBox={titleBox} lang={lang} homeSetInView={homeSetInView} />
       <AboutSection lang={lang} products={products} setInView={setInView} />
-      <WorksSection worksSetInView={worksSetInView} />
+      <WorksSection worksSetInView={worksSetInView} works={works}/>
       <ContactsSection contactsSetInView={contactsSetInView} />
     </main>
   );

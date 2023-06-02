@@ -7,13 +7,6 @@ const prisma = new PrismaClient();
 async function seed() {
   const email = "davideochoa.dev@gmail.com";
 
-  const data = Array.from(works).map(data => ({
-    title : data.title || "",
-    picture_url: data.picture_url || "",
-    preview_url: data.preview_url || "",
-    repo_url: data.repo_url || "",
-  }));
-
   // cleanup the existing database
   await prisma.user.delete({ where: { email } }).catch(() => {
     // no worries if it doesn't exist yet

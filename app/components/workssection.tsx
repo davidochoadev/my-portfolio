@@ -3,6 +3,7 @@ import { InView } from "react-intersection-observer";
 
 export default function WorksSection(data: any) {
 	const worksSetInView = data.worksSetInView;
+  const works = data.works;
   return (
     <section className="relative h-screen flex flex-col justify-center items-center snap-start">
       <InView
@@ -15,6 +16,13 @@ export default function WorksSection(data: any) {
       <Typography as="div" id="title-about-section" className="text-[#33DDB3] font-goodbrush text-center" variant="h2">
         {data.lang ? ("My Works & Projects") : ("I miei Progetti")}
       </Typography>
+      {works.map((work : any) => (
+        <div key={work.id}>
+          {work.title}
+        </div>
+      ))
+
+      }
       {/* MAIN CONTAINER OF WORKS SECTION */}
       <div id="works-section"className="gap-4 shadow-md overflow-hidden py-4 px-4 bg-inherit lg:shadow-none w-full h-3/4 rounded-3xl self-center flex justify-start flex-col md:flex-row md:flex-wrap relative lg:gap-4 md:justify-center">
       </div>
