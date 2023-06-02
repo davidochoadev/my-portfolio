@@ -16,15 +16,18 @@ export default function WorksSection(data: any) {
       <Typography as="div" id="title-about-section" className="text-[#33DDB3] font-goodbrush text-center" variant="h2">
         {data.lang ? ("My Works & Projects") : ("I miei Progetti")}
       </Typography>
-      {works.map((work : any) => (
-        <div key={work.id}>
-          {work.title}
-        </div>
-      ))
-
-      }
       {/* MAIN CONTAINER OF WORKS SECTION */}
       <div id="works-section"className="gap-4 shadow-md overflow-hidden py-4 px-4 bg-inherit lg:shadow-none w-full h-3/4 rounded-3xl self-center flex justify-start flex-col md:flex-row md:flex-wrap relative lg:gap-4 md:justify-center">
+        <div className="grid grid-cols-3 grid-rows-2 grow w-min gap-4 h-full max-w-screen-lg">
+        {works.map((work : any) => (
+          <div key={work.id} className="bg-white p-4 w-full h-min rounded-xl">
+            <h3>{work.title}</h3>
+            <picture>
+              <img src={work.picture_url} alt= {`${work.title}`} className="w-min h-4/5"/>
+            </picture>
+          </div>
+        ))}
+        </div>
       </div>
     </section>
   );
